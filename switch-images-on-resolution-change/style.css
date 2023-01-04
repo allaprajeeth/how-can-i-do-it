@@ -1,0 +1,37 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.boundary {
+    max-width: 1440px;
+    margin: 0 auto;
+
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+}
+
+figure .image-desktop {
+    display: none;
+}
+
+figure .image-mobile {
+    display: inline-block;
+}
+
+@media (min-width : 576px) {
+    figure .image-desktop {
+        display: inline-block;
+    }
+
+    figure .image-mobile {
+        display: none;
+    }
+
+}

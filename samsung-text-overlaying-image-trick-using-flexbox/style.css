@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.boundary {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+
+
+.flex-layout {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.overlay-wrapper {
+    z-index: 1;
+    pointer-events: none;
+    margin-left: -100%;
+}
+
+.overlay-content {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0vw 6.11111111vw;
+}
+
+.background-img {
+    min-height: 16.66666667vw;
+}
+
+.flex-item {
+    flex: 1;
+    max-width: 100%;
+    position: relative;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+}
+
+figure .image-desktop {
+    display: none;
+}
+
+figure .image-mobile {
+    display: inline-block;
+}
+
+@media (min-width : 576px) {
+    figure .image-desktop {
+        display: inline-block;
+    }
+
+    figure .image-mobile {
+        display: none;
+    }
+
+}

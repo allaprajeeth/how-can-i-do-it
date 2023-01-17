@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            --border-color: #ccc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fff;
+            font-family: 'Nunito', sans-serif;
+            font-size: 16px;
+        }
+
+        .banner-img {
+            width: 100%;
+            height: auto;
+        }
+
+        .image-desktop {
+            display: none;
+        }
+
+        .image-mobile {
+            display: inline-block;
+        }
+
+        @media (min-width : 768px) {
+            .image-desktop {
+                display: inline-block;
+            }
+
+            .image-mobile {
+                display: none;
+            }
+        }
+
+        header {
+            background: #fff;
+            border-bottom: 1px solid var(--border-color);
+            z-index: 4;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        main {
+            margin-top: 56px;
+        }
+
+        header nav {
+            position: relative;
+        }
+
+        header ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+        }
+
+        header ul .nav-link {
+            display: inline-block;
+            text-decoration: none;
+            color: #393939;
+            font-size: 14px;
+            padding: 18px 30px;
+        }
+
+
+
+        .banner {
+            position: relative;
+        }
+
+        
+        .background-blur {
+            position: fixed;
+            top: 56px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: transparent;
+            backdrop-filter: blur(12px);
+            visibility: hidden;
+            transition: visibility .1s;
+        }
+
+        .drop-down {
+            position: absolute;
+            top: 0;
+            left: 5vw;
+            width: 90vw;
+            height: 300px;
+            border: 1px solid var(--border-color);
+            border-top: none;
+            transition: all 0.3s;
+
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(2px);
+            border-radius: 3px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            padding: 20px;
+        }
+
+        .nav-item:hover .nav-link {
+            color: #000;
+            font-weight: 600;
+        }
+
+        .nav-item:hover .background-blur {
+            visibility: visible;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                    <div class="background-blur">
+                        <div class="drop-down">
+                            <h4>Home drop-down</h1>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Features</a>
+                    <div class="background-blur">
+                        <div class="drop-down">
+                            <h4>Features drop-down</h4>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Pricing</a>
+                    <div class="background-blur">
+                        <div class="drop-down">
+                            <h4>Pricing drop-down</h4>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">FAQs</a>
+                    <div class="background-blur">
+                        <div class="drop-down">
+                            <h4>FAQs drop-down</h4>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About</a>
+                    <div class="background-blur">
+                        
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="banner">
+            <img src="assets/large-screen.webp" class="banner-img image-desktop" alt="">
+            <img src="assets/small-screen.webp" class="banner-img image-mobile" alt="">
+        </div>
+    </main>
+
+</body>
+
+</html>

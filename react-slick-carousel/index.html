@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="https://react-slick.neostack.com/docs/example/responsive/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            padding: 50px 0;
+            background: #dedede;
+        }
+
+        .container {
+            margin: 0 auto;
+            padding: 0 15px;
+            width: 100%;
+        }
+
+
+        .wrapper {
+            width: 100%;
+            padding: 0 40px;
+        }
+
+        @media (min-width : 992px) {
+            .container {
+                margin: 0 auto;
+                width: 1022px;
+            }
+        }
+
+        .slick-slide {
+            height: 150px;
+            margin: 0 8px;
+
+        }
+
+        .slide-image {
+            border-radius: 8px;
+            overflow: hidden;
+            background: url(https://i.picsum.photos/id/1073/200/100.jpg?hmac=dhd1FE9vZYILkvXtNTn4EDb1-Fy0H2bjQbyE9NkTURU);
+            height: 100%;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .slide-btn {
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            width: 40px;
+            margin: 0;
+            padding: 0;
+            border: 1px solid #ccc;
+            border-radius: 0;
+            outline: none;
+            appearance: none;
+            height: 100%;
+            /* background: #fff; */
+            z-index: 999;
+            transition: all 0.3s linear;
+        }
+
+        .slide-btn img {
+            width: 100%;
+        }
+
+        .prev-btn {
+            left: -40px;
+            background: linear-gradient(to left, #fff 50%, #ccc);
+            /* box-shadow: 9px 0px 18px 0px rgb(255, 255, 255); */
+        }
+
+        .prev-btn:hover {
+            background: linear-gradient(to left, #fff 10%, #ccc);
+            box-shadow: 18px 0px 24px 0px rgb(255, 255, 255);
+        }
+
+
+        .next-btn {
+            right: -40px;
+            background: linear-gradient(to right, #fff 50%, #ccc);
+            /* box-shadow: -9px 0px 18px 0px rgb(255, 255, 255); */
+        }
+
+        .next-btn:hover {
+            background: linear-gradient(to right, #fff 10%, #ccc);
+            box-shadow: -18px 0px 24px 0px rgb(255, 255, 255);
+        }
+
+
+        .slick-disabled,
+        .slick-disabled:hover {
+            /* display: none !important; */
+            box-shadow: none;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .slick-list.draggable {
+            padding: 0 100px 0 0px !important;
+        }
+
+        .box {
+            height: 600px;
+            background: red;
+            border: 5px solid white;
+        }
+
+        #target-section {
+            background: dodgerblue;
+        }
+
+        .header {
+            padding: 10px 40px;
+            background: lightcoral;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        ul>li {
+            padding: 10px 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class='container'>
+        <div class="wrapper">
+            <div class='custom-carousel'>
+                <div>
+                    <div class="slide-image">
+                    </div>
+                </div>
+                <div>
+                    <div class="slide-image">
+                    </div>
+                </div>
+                <div>
+                    <div class="slide-image">
+                    </div>
+                </div>
+                <div>
+                    <div class="slide-image">
+                    </div>
+                </div>
+                <div>
+                    <div class="slide-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"
+        integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script>
+        $(".custom-carousel").slick({
+            dots: false,
+            infinite: false,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            initialSlide: 0,
+            prevArrow: '<button class="slide-btn prev-btn"><img src="./prev-icon.png" /></button>',
+            nextArrow: '<button class="slide-btn next-btn"><img src="./next-icon.png" /></button>',
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+    </script>
+
+</body>
+
+</html>
